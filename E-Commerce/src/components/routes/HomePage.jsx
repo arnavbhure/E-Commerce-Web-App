@@ -21,7 +21,7 @@ const HomePage = () => {
                 <div className="col-lg-7 text-center text-lg-start">
                   {" "}
                   <h1 className="display-4 fw-bold lh-1 text-body-emphasis mb-3">
-                    Welcome To E-Commmerce App
+                    Welcome To E-Commerce App
                   </h1>{" "}
                   <code>
                     <p style={{ marginTop: "3rem", fontSize: "1.15rem" }}>
