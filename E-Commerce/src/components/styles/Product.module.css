@@ -1,0 +1,41 @@
+.ProductsFlexBox {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.ProductStyle {
+  width: 47%;
+  min-height: 200px;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 4px 2px rgb(224, 224, 224);
+  margin: 5rem 0rem;
+}
+
+.BigText {
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  margin: 1rem 0.5rem;
+}
+.BiggerText {
+  margin: 1rem 0.5rem;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+.AddToCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+.AddToCart button {
+  width: 90%;
+}
+
+.DescriptionText {
+  margin: 1rem 0.5rem;
+}
+
+.CentreText {
+  text-align: center;
+}
