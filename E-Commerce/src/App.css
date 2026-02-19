@@ -14,3 +14,29 @@
   text-decoration: none;
   color: black;
 }
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.cart-product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.bag-item-count {
+  background-color: #f16565;
+  white-space: nowrap;
+  text-align: center;
+  padding: 0 6px;
+  position: relative;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  color: #fff;
+  left: 12px;
+  top: -44px;
+  font-weight: 800;
+  cursor: pointer;
+}

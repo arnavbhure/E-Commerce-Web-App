@@ -3,8 +3,11 @@ import { GrTable } from "react-icons/gr";
 import { FaShoppingCart, FaHome } from "react-icons/fa";
 import style from "./styles/Header.module.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const items = useSelector((store) => store.cart);
+
   return (
     <div className={`sticky-top text-white ${style.GlassHeader}`}>
       {/* Top Navbar */}
@@ -44,10 +47,11 @@ const Header = () => {
               </li>
 
               <li>
-                <a href="#" className="nav-link text-white text-center">
+                <Link to="/cart" className="nav-link text-white text-center">
                   <FaShoppingCart size={25} className="d-block mx-auto mb-1" />
                   Cart
-                </a>
+                  <span className="bag-item-count">{items.length}</span>
+                </Link>
               </li>
             </ul>
           </div>

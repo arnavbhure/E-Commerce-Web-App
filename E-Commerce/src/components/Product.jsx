@@ -1,7 +1,19 @@
+import { useDispatch, useSelector } from "react-redux";
 import style from "./styles/Product.module.css";
 import { MdOutlineStar } from "react-icons/md";
+import { CartItemsActions } from "../store/CartItems";
 
 const Product = ({ item }) => {
+  const dispatch = useDispatch();
+  const CartItems = useSelector((store) => store.cart);
+  const isInCart = CartItems.some((cartItem) => cartItem.id === item.id);
+
+  const handleOnAddToCart = () => {
+    dispatch(CartItemsActions.addToCart(item));
+  };
+  const handleOnRemoveFromCart = () => {
+    dispatch(CartItemsActions.removeFromCart(item.id));
+  };
   return (
     <>
       <div className={`card mb-3 ${style.ProductStyle}`}>
@@ -46,9 +58,23 @@ const Product = ({ item }) => {
               </p>
               <div className={`${style.AddToCart}`}>
                 {" "}
-                <button type="button" className={`btn btn-success `}>
-                  Add To Cart
-                </button>
+                {!isInCart ? (
+                  <button
+                    type="button"
+                    className={`btn btn-success `}
+                    onClick={handleOnAddToCart}
+                  >
+                    Add To Cart
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    className={`btn btn-danger `}
+                    onClick={handleOnRemoveFromCart}
+                  >
+                    Remove
+                  </button>
+                )}
               </div>
             </div>
           </div>

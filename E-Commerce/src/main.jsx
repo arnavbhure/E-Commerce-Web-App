@@ -7,6 +7,7 @@ import Home from "./components/Home.jsx";
 import { Provider } from "react-redux";
 import EcomStore from "./store/index.js";
 import HomePage from "./components/routes/HomePage.jsx";
+import Cart from "./components/routes/Cart.jsx";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,8 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: "products", element: <Home /> },
+      { path: "/products", element: <Home /> },
+      { path: "/cart", element: <Cart /> },
     ],
   },
 ]);
