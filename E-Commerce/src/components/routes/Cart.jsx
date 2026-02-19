@@ -63,7 +63,7 @@ const Cart = () => {
                 style={{ fontSize: "1.2rem", fontWeight: "600" }}
               >
                 Total Price
-                <span>{totalPrice}</span>
+                <span>${totalPrice}</span>
               </li>
             </ul>
 
