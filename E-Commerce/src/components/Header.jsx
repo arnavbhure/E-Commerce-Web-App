@@ -1,7 +1,8 @@
 import { FiGrid } from "react-icons/fi";
 import { GrTable } from "react-icons/gr";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaHome } from "react-icons/fa";
 import style from "./styles/Header.module.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -19,10 +20,20 @@ const Header = () => {
 
             <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
               <li>
-                <a href="#" className="nav-link text-white text-center">
+                <Link to="/" className="nav-link text-white text-center">
+                  <FaHome size={25} className="d-block mx-auto mb-1" />
+                  Home
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/products"
+                  className="nav-link text-white text-center"
+                >
                   <FiGrid size={25} className="d-block mx-auto mb-1" />
                   Products
-                </a>
+                </Link>
               </li>
 
               <li>

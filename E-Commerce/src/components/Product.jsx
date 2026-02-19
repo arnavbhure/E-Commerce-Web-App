@@ -33,7 +33,7 @@ const Product = ({ item }) => {
               <p
                 className={`card-text text-secondary ${style.BigText} ${style.CentreText}`}
               >
-                <MdOutlineStar color="orange" size={27} /> {item.rating.rate} |{" "}
+                {item.rating.rate} <MdOutlineStar color="orange" size={27} /> |{" "}
                 {item.rating.count}
               </p>
               <p

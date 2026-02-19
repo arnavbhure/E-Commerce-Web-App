@@ -1,0 +1,16 @@
+.explore-all-products-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.explore-all-products-button button {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+.explore-all-products-button button a {
+  text-decoration: none;
+  color: black;
+}
