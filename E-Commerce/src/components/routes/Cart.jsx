@@ -1,9 +1,23 @@
 import { BsCart2 } from "react-icons/bs";
 import CartProduct from "../CartProduct";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { OrderSliceActions } from "../../store/OrdersSlice";
 
 const Cart = () => {
   const items = useSelector((store) => store.cart);
+  const dispatch = useDispatch();
+  const handleOnPlaceOrder = () => {
+    alert("Order Placed ");
+    dispatch(
+      OrderSliceActions.addToOrders({
+        id: Date.now(),
+        items,
+        totalPrice,
+        orderPlacedAt: new Date().toISOString(),
+      }),
+    );
+  };
+
   let totalPrice = 0;
   {
     items.map((item) => (totalPrice += item.price));
@@ -82,6 +96,7 @@ const Cart = () => {
                 type="button"
                 className="btn btn-success"
                 style={{ margin: "2rem 1.5rem" }}
+                onClick={handleOnPlaceOrder}
               >
                 Place Order
               </button>

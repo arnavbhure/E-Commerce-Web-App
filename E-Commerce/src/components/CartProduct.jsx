@@ -13,7 +13,12 @@ const CartProduct = ({ item }) => {
     <>
       <div
         className="card mb-3"
-        style={{ maxWidth: "540px", margin: "1rem 0rem", width: "47.5%" }}
+        style={{
+          maxWidth: "540px",
+          margin: "1rem 0rem",
+          width: "47.5%",
+          border: "none",
+        }}
       >
         <div className="row g-0">
           <div className="col-md-4">
